@@ -1,0 +1,48 @@
+.headerbilde {
+  width: 300px;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: "Instrument Serif", serif;
+}
+h2 {
+  font-size: 50px;
+  font-family: "Inclusive Sans";
+}
+p {
+  font-size: 20px;
+  font-family: "Inclusive Sans";
+}
+
+.carousel {
+  display: inline-flex;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    box-sizing: content-box;
+    display: flex;
+    flex: none;
+    scroll-snap-align: start;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+}
