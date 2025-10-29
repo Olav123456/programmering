@@ -11,12 +11,39 @@
       rel="stylesheet"
     />
   </head>
-  <skript>
   <body>
     <h1>jeg er olav</h1>
-    <img src="img/selveste olav.jpg" alt="bilde av olav" class="headerbilde" />
+    
+    <!-- Image Carousel -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-slide active">
+          <img src="img/selveste olav.jpg" alt="bilde av olav" />
+        </div>
+        <!-- Add more slides here -->
+        <div class="carousel-slide">
+          <img src="img/selveste olav.jpg" alt="bilde 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="img/selveste olav.jpg" alt="bilde 3" />
+        </div>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      
+      <!-- Dot Indicators -->
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    
     <h2>min arbeids erfaring</h2>
     <p>qwertyuiopåasdfghjklzxcvbnmmqwertyuiopasdfgh<br> jklzxcvbnmoefsejesnfsejfspijesjljfljes</p>
-    </skript>
+    
+    <script src="carousel.js"></script>
   </body>
 </html>
