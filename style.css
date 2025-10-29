@@ -2,6 +2,92 @@
   width: 300px;
 }
 
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.5s;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Dot Indicators */
+.carousel-dots {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
+
 h1 {
   font-size: 100px;
   font-family: "Instrument Serif", serif;
@@ -15,34 +101,4 @@ p {
   font-family: "Inclusive Sans";
 }
 
-.carousel {
-  display: inline-flex;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
-  }
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .carousel-item {
-    box-sizing: content-box;
-    display: flex;
-    flex: none;
-    scroll-snap-align: start;
-  }
-
-  .relative {
-    position: relative;
-  }
-
-  .absolute {
-    position: absolute;
-  }
-
-  .w-full {
-    width: 100%;
-  }
-}
+// The following code below this comment is written by Simon Bråten and is released under the CC BY 4.0 license.
